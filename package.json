@@ -1,0 +1,23 @@
+{
+  "name": "playwright-ms-framework",
+  "version": "1.0.0",
+  "description": "Advanced Playwright E2E test automation framework with POM and DDT",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "testing",
+    "pom",
+    "data-driven"
+  ],
+  "author": "Kamal Priyank <kp.samireddi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1"
+  }
+}
+        
