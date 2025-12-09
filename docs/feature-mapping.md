@@ -7,13 +7,16 @@
 
 
 
+
 ## 1. Search Functionality
-The search feature is the primary entry point for product discovery. It supports a variety of user flows, filter options, and error handling to ensure a seamless experience.
+The search feature is the primary entry point for product discovery, enabling users to quickly locate items of interest. It supports intuitive user flows, robust filtering, and responsive error handling to ensure a seamless experience for all shoppers.
 
 
-### Entry Point
-- **URL:** https://www.marksandspencer.com/
-- **Main Element:** Search input bar in the website header
+
+### Entry Points
+- **Homepage URL:** https://www.marksandspencer.com/
+- **Main Element:** Prominently placed search input bar in the website header, accessible via keyboard and screen readers
+
 
 
 
@@ -21,20 +24,22 @@ The search feature is the primary entry point for product discovery. It supports
 1. **Basic Search**
    - User enters a product query (e.g., "Men's Suits")
    - Initiates search via button or Enter key
-   - Redirected to a dynamically generated results page
+   - Redirected to a dynamically generated results page with relevant products
 
 2. **Search Results Display**
-   - Results header displays the query
-   - Filter options (Brand, Colour, Size, Style, Fit) are visible
+   - Results header displays the search query
+   - Filter options (Brand, Colour, Size, Style, Fit) are visible and accessible
    - Result count is shown
    - Product cards include: image, price, product name, description, rating, and review count
 
 3. **Search Filters**
    - User expands "All Filters" to reveal advanced options (Gender, Material, Body Fit, Occasions, Price, Pattern)
-   - Filters can be combined for granular results
+   - Filters can be combined for granular, personalized results
 
 4. **Search Sorting**
    - Results can be sorted by relevance (default), new arrivals, best selling, price (low-high, high-low), and ratings
+   - Sorting options are accessible and update results instantly
+
 
 
 
@@ -49,11 +54,14 @@ The search feature is the primary entry point for product discovery. It supports
 
 
 
+
 ### Expected Behaviors
 - Search executes within 3 seconds for optimal user experience
 - Results are returned for any valid query (minimum 0 results)
 - Filters update results instantly and dynamically
 - Sorting preserves current filter selections
+- All search and filter controls are accessible via keyboard and screen readers
+
 
 
 
@@ -61,25 +69,29 @@ The search feature is the primary entry point for product discovery. It supports
 - **Empty search:** Validation message or no action
 - **No results:** "No products found" message displayed
 - **Network error:** Error message with retry option
+- **Invalid input:** User is prompted to enter a valid query
+
 
 
 
 ## 2. Product Display and Details
-Product pages provide detailed information and interactive options for each item, supporting both single and multi-item products.
+Product pages provide comprehensive information and interactive options for each item, supporting both single and multi-item products. The design ensures clarity, accessibility, and a smooth shopping experience.
 
 
 
-### Entry Point
+
+### Entry Points
 - **Sources:** Search results, category pages, homepage recommendations
 - **URL Pattern:** Complex and distinctive; entry point hooks will be analyzed in future framework upgrades
 
 
 
+
 ### User Flows
 1. **View Product Details**
-   - Product gallery displays multiple images
-   - Product title and pricing are shown (single or multi-item)
-   - Color and size options are available for selection
+   - Product gallery displays multiple high-resolution images
+   - Product title, pricing, and availability are clearly shown
+   - Color and size options are available for selection, with visual feedback
    - Size Chart and Fit Guide provide additional sizing information
    - "Add to Bag" button enables purchase flow
    - Informational sections: "About this style", "Details and care", "Delivery, collections & returns"
@@ -90,6 +102,7 @@ Product pages provide detailed information and interactive options for each item
 2. **Product Variants**
    - User selects size and color
    - Product images update based on selected attributes
+   - Variant selection is accessible and provides instant feedback
 
 3. **Add to Bag**
    - Single-item products: quantity selector available
@@ -97,29 +110,33 @@ Product pages provide detailed information and interactive options for each item
    - Overlay confirmation: "Great taste! [product title] [color, size & length]" with options to continue shopping or proceed to checkout
    - Cart icon updates to reflect total items
 
-4. **Key UI Elements**
-   - Product gallery, title, price, color/size selectors, Add to Bag button, informational sections, cart icon
+### Key UI Elements
+- Product gallery, title, price, color/size selectors, Add to Bag button, informational sections, cart icon
 
-5. **Expected Behaviors**
-   - Size selection required before adding to bag
-   - Quantity per item: 1–20 (subject to stock)
-   - Successful add triggers overlay confirmation
-   - Out-of-stock items cannot be added
+### Expected Behaviors
+- Size selection required before adding to bag
+- Quantity per item: 1–20 (subject to stock)
+- Successful add triggers overlay confirmation
+- Out-of-stock items cannot be added
+- All controls are accessible and provide clear feedback
 
-6. **Error States**
-   - Missing size: "Please select the size" validation
-   - Out of stock: "Notify Me" option
-   - Quantity exceeds maximum: Apologies message (e.g., suits allow up to 20, but cart may reduce to 16 on review)
+### Error States
+- **Missing size:** "Please select the size" validation
+- **Out of stock:** "Notify Me" option
+- **Quantity exceeds maximum:** Apologies message (e.g., suits allow up to 20, but cart may reduce to 16 on review)
+
 
 
 
 ## 3. Shopping Cart Features
-The shopping cart aggregates selected products, supports quantity management, wishlist integration, and checkout initiation.
+The shopping cart aggregates selected products, supports quantity management, wishlist integration, and checkout initiation. It is designed for clarity, responsiveness, and accessibility, ensuring users can manage their selections with ease.
 
 
-### Entry Point
+
+### Entry Points
 - **Access:** Click cart icon in header
 - **URL:** https://www.marksandspencer.com/basket/view#intid=header_minibasket_view-bag-button
+
 
 
 
@@ -128,10 +145,12 @@ The shopping cart aggregates selected products, supports quantity management, wi
    - All added items are displayed with images, collection, title, color, size, and length
    - Basket and wishlist item counts are shown
    - Summary tab displays total price (excluding delivery)
+   - Cart is accessible via keyboard and screen readers
 
 2. **Update Quantities**
    - Quantity can be changed via dropdown
    - Price and item count update instantly
+   - Quantity controls are accessible and provide feedback on limits
 
 3. **Remove or Move Items to Wishlist**
    - Remove/delete button removes item from cart
@@ -145,8 +164,10 @@ The shopping cart aggregates selected products, supports quantity management, wi
 
 
 
+
 ### Key UI Elements
 - Cart icon, item list, quantity dropdown, remove button, wishlist button, summary tab, checkout button
+
 
 
 ### Expected Behaviors
@@ -154,6 +175,8 @@ The shopping cart aggregates selected products, supports quantity management, wi
 - Quantity changes recalculate prices instantly
 - Removing last item triggers empty cart state
 - Checkout requires at least one item in the cart
+- All cart controls are accessible and provide clear feedback
+
 
 
 ### Error States
@@ -163,30 +186,80 @@ The shopping cart aggregates selected products, supports quantity management, wi
 
 
 
-## 4. Checkout Flow
-The checkout process guides users through payment and order completion, handling both signed-in and guest flows.
 
-### Entry Point
+## 4. Checkout Flow
+The checkout process guides users through payment and order completion, handling both signed-in and guest flows. It is designed for security, clarity, and accessibility, ensuring a smooth transaction experience.
+
+
+### Entry Points
 - **Source:** Shopping bag/cart
 - **URL:** Complex, parameterized (varies by session and cart contents)
 
+
 ### User Flows
-- User clicks "Checkout Securely" from cart
-- If signed in, redirected to payment and address entry
-- If not signed in, prompted to sign in or continue as guest
-- Guest checkout requests email, then proceeds to payment
-- Order summary, address, delivery options, and payment methods are presented
-- Confirmation page shown after successful payment
+1. **Initiate Checkout**
+   - User clicks "Checkout Securely" from cart
+   - If signed in, redirected to payment and address entry
+   - If not signed in, prompted to sign in or continue as guest
+
+2. **Guest Checkout**
+   - Guest checkout requests email, then proceeds to payment
+   - Guest users can enter address and delivery details
+
+3. **Order Completion**
+   - Order summary, address, delivery options, and payment methods are presented
+   - Confirmation page shown after successful payment
+   - All forms and controls are accessible and provide validation feedback
+
 
 ### Key UI Elements
 - Checkout button, sign-in prompt, guest email input, address form, delivery options, payment method selector, order summary, confirmation message
+
 
 ### Expected Behaviors
 - Checkout flow is secure and user-friendly
 - All required fields must be completed before payment
 - Order confirmation is displayed after successful transaction
+- All forms and controls are accessible and provide clear validation feedback
+
 
 ### Error States
-- Missing required fields: validation errors
-- Payment failure: error message and retry option
-- Out-of-stock items: notification and removal from order
+- **Missing required fields:** Validation errors
+- **Payment failure:** Error message and retry option
+- **Out-of-stock items:** Notification and removal from order
+
+
+## 5. Navigating and Browsing
+
+### Overview
+This section covers how users navigate and browse the M&S e-commerce site, including menu interactions, category exploration, breadcrumb navigation, and access to key informational links. The navigation experience is designed for clarity, accessibility, and efficiency.
+
+### User Flows
+1. **Main Menu Navigation**
+   - Hover over main menu categories to reveal subcategories
+   - Click a subcategory to view its landing page
+   - Explore category landing pages with featured products and filters
+   - Browse products within a category using pagination or infinite scroll
+   - All menu interactions are accessible via keyboard and screen readers
+
+2. **Breadcrumb Navigation**
+   - Breadcrumbs display the user's current location within the site hierarchy (e.g., Home / Men / Men's Knitwear / Men's Jumpers)
+   - Users can click any breadcrumb to navigate back to a previous section
+   - Breadcrumbs update dynamically as users move between categories and product pages
+
+3. **Footer and Informational Links**
+   - Footer provides quick access to support, store information, accessibility, product recalls, and site map
+   - Delivery & Returns section includes order tracking, delivery options, guest order management, and refund policies
+   - Shopping with Us section offers links to Sparks loyalty program, FAQs, gift card balance, size guides, and sustainability initiatives
+   - More from M&S includes links to Ocado, corporate site, gifts, financial services, opticians, and careers
+
+### Accessibility Considerations
+- Menus and navigation elements are keyboard-accessible
+- ARIA labels and roles are used for screen readers
+- High-contrast and large-text options available in footer
+
+### Expected Behaviors
+- Main menu opens on hover and is responsive to touch/click
+- Breadcrumbs accurately reflect navigation path and update in real time
+- Category and landing pages load in under 200ms for optimal user experience
+- Footer links are always accessible and open in appropriate context (same tab or new tab as needed)
