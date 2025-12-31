@@ -263,3 +263,40 @@ This section covers how users navigate and browse the M&S e-commerce site, inclu
 - Breadcrumbs accurately reflect navigation path and update in real time
 - Category and landing pages load in under 200ms for optimal user experience
 - Footer links are always accessible and open in appropriate context (same tab or new tab as needed)
+
+# 6. Error Handling & Edge Cases
+
+### Scenearios to test
+
+### 1. Network Issues
+
+- Slow Connection
+- Connection Timeout
+- Server Error (500)
+
+### 2. Browser Compatibility
+
+- Different browsers (Chrome, Firefox, Safari)
+- Different screen sizes
+- Mobile responsive
+
+### 3. Session Management
+
+- Cart persistence
+- Session timeout
+- Concurrent sessions
+
+### 4. Data Validation
+
+- Special characters in search
+- SQL injection attempts (security)
+- XSS attempts (security)
+- Maximum input lengths
+
+# 7. Performance Considerations
+
+- Page load time < 3 seconds
+- Search response < 3 seconds
+- Image loading progressive
+- Smooth scrolling on product grids
+
