@@ -32,4 +32,59 @@
 **AND** the page shows a helpful prompt, for example:
 "Don't give up — check the spelling, try the product code, or search for something more generic."
 
+### AC 1.4: Search - Empty Input
 
+**GIVEN** user is on the M&S hompage
+**WHEN** user clicks the search button without entering any text
+**THEN** the system shows a tooltip message "Please fill in this field".
+**AND** does not redirect to search results page
+
+### AC 1.5: Search Filters - Price Range
+
+**GIVEN** use has executed a search and is on the results page
+**WHEN** user applies a price filter (ex: £20 to £150)
+**THEN** only products within that price range are displayed
+**AND** the result count updates to reflect filtered results
+**AND** filter state is maintained when scrolling or sorting
+
+### AC 1.6: Searcg Sorting
+
+**GIVEN** user has search results displayed
+**WHEN** user selects a sort option
+**THEN** products are reordered according to the selected criteria
+**AND** applied filters remain active
+**AND** the sort selection is visibily indicated
+
+## Feature 2: Product Display & Details
+
+### AC 2.1: View Product Details
+
+**GIVEN** user clicks on a product from search results or category page
+**WHEN** the product details page loads
+**THEN** the following information is displayed:
+- product title
+- product price
+- product images
+- product description
+- Available sizes/colors
+- Stock status
+- Add to bag button
+
+**AND** page loads within 3 seconds
+
+### AC 2.2: Select Product Variant (Size)
+
+**GIVEN** user is on a product details page
+**WHEN** user clicks on a size option
+**THEN** the selected size is visually highlighted
+**AND** the price updates if variant-specific pricing exists
+**AND** the stock status updates for that size
+
+### AC 2.3: Add Product to Bag - Success
+
+**GIVEN** user is on a product details page
+**AND** has selected a size
+**WHEN** user clicks the "Add to bag" button
+**THEN** a success confirmation message appears
+**AND** the cart icon in header updates to show item count
+**AND** user can continue shopping or view bag
