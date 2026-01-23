@@ -88,3 +88,28 @@
 **THEN** a success confirmation message appears
 **AND** the cart icon in header updates to show item count
 **AND** user can continue shopping or view bag
+
+### AC 2.4  Add to Bag - No Size Selected
+
+**GIVEN** user is on a product details page for a sized product
+**AND** has not selected a size
+**WHEN** user clicks "Add to bag"
+**THEN** an error message displays
+**AND** the size selector is highlighted
+**AND** the product is not added to the bag
+
+### AC 2.5 Product out of stock
+
+**GIVEN** user views a product that is out of stock
+**WHEN** the product page loads
+**THEN** the "Add to bag" button is disabled
+**AND** a message displays: "Out of stock"
+**AND** a "Notify me when available" option may be shown
+
+### AC 2.6: Quantity Selection
+
+**GIVEN** user is on a product details page
+**WHEN** user changes the quantity field
+**THEN** the quantity selector accepts values 1-99
+**AND** adding to bag adds the specified quantify
+**AND** invalid quantities(0, negative, >max) show error messages
