@@ -112,4 +112,4 @@
 **WHEN** user changes the quantity field
 **THEN** the quantity selector accepts values 1-99
 **AND** adding to bag adds the specified quantify
-**AND** invalid quantities(0, negative, >max) showqqqqqs error message
+**AND** invalid quantities(0, negative, >max) showqqqqqs error toast message
