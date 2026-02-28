@@ -37,7 +37,7 @@
 **GIVEN** user is on the M&S hompage
 **WHEN** user clicks the search button without entering any text
 **THEN** the system shows a tooltip message "Please fill in this field".
-**AND** does not redirect to search results page
+**AND** does not redirect to search results page bar
 
 ### AC 1.5: Search Filters - Price Range
 
